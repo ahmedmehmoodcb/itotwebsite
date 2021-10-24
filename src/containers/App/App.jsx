@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className="card">
         <div className="card-body">
-          <button className="btn btn-primary"> Welcome To ITOT </button>
+          <button className="btn btn-primary"> Welcome To ITOT  Start</button>
         </div>
       </div>
     </div>
