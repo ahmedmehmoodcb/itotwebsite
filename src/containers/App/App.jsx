@@ -1,15 +1,16 @@
 import "../../App.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap";
-
+import NaveBar from "../component/NaveBar";
+import CarosalSlider from "../component/dashboard/Slider";
+import CardsComponent from "../component/cardsComponent/CardsComponent";
+import Dashboard from "../Layout/Dashboard";
+// import Footer from "../component/Footer/index";
 function App() {
   return (
     <div className="App">
-      <div className="card">
-        <div className="card-body">
-          <button className="btn btn-primary"> Welcome To ITOT  Start</button>
-        </div>
-      </div>
+      <NaveBar />
+      {/* <div className="card"> */}
+      {/* <CarosalSlider /> */}
+      <Dashboard />
     </div>
   );
 }
