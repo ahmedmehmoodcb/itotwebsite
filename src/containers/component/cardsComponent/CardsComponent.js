@@ -76,13 +76,13 @@ function CardsComponent() {
     },
   ];
   return (
-    <div className=" w-100 m-auto d-flex align-items-center flex-wrap justify-center">
+    <div className=" w-100 m-auto d-flex align-items-center flex-wrap justify-content-center">
       {array.map((card, index) => {
         return (
           <div
-            className="d-flex align-items-ceter flex-column justify-center p-2 m-2"
+            className="d-flex align-items-center flex-column justify-content-center p-2 m-2"
             key={index}
-            style={{ width: "300px" }}
+            style={{ width: "320px" }}
           >
             <div>
               <img

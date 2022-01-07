@@ -3,13 +3,12 @@ import ReactDOM from "react-dom";
 import "./scss/containers/App/index.css";
 import App from "./containers/App/App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter as Router } from "react-router-dom";
+import Popper from "@popperjs/core";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

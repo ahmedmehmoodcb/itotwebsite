@@ -1,41 +1,61 @@
 import React from "react";
-// import Slider from "react-slick";
-// import "~slick-carousel/slick/slick.css";
-// import "~slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function CarosalSlider() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrowLeft: false,
+    arrowRight: false,
+    dots: true,
+    // slidesToShow: 3,
+    arrows: false,
+    autoplay: true,
+    focusOnSelect: true,
+  };
   return (
-    <div
-      id="carouselExampleDark"
-      className="carousel carousel-dark slide"
-      data-bs-ride="carousel"
-    >
-      <div>
-        <h2> Single Item</h2>
-        {/* <Slider {...settings}>
-            <div>
-              <h3>1</h3>
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
-            </div>
-          </Slider>
-         */}
-      </div>
+    <div className="container-fluid mb-5">
+      <div className="mx-3">
+        <Slider {...settings}>
+          <div>
+            <img
+              src="Page-01-Sec-03/002-b.jpg"
+              alt="link not found"
+              style={{ width: "100%", height: "70vh", margin: "auto" }}
+            />
+          </div>
+          <div>
+            <img
+              src="Page-01-Sec-03/002-b.jpg"
+              alt="link not found"
+              style={{ width: "100%", height: "70vh", margin: "auto" }}
+            />
+          </div>
+          <div>
+            <img
+              src="Page-01-Sec-03/003-b.jpg"
+              alt="link not found"
+              style={{ width: "100%", height: "70vh", margin: "auto" }}
+            />
+          </div>
 
-      <div className="carousel-indicators">
+          <div>
+            <img
+              src="Page-01-Sec-03/004-b.jpg"
+              alt="link not found"
+              style={{ width: "100%", height: "70vh", margin: "auto" }}
+            />
+          </div>
+        </Slider>
+      </div>
+      {/* ******************************************* */}
+      {/* <div className="carousel-indicators my-5 ">
         <button
           type="button"
           data-bs-target="#carouselExampleDark"
@@ -57,6 +77,7 @@ function CarosalSlider() {
           aria-label="Slide 3"
         ></button>
       </div>
+     */}
     </div>
   );
 }
