@@ -6,6 +6,7 @@ import CarosalSlider from "../component/dashboard/Slider";
 import Dashboard from "../Layout/Dashboard";
 import WhyItotComponet from "../component/whyItot/whyItotComponet";
 import Footer from "../component/Footer";
+import Comprative from "../component/Page-02/comprative";
 
 function App() {
   return (
@@ -13,10 +14,11 @@ function App() {
       <BrowserRouter>
         <NaveBar />
         {/* <Routes> */}
-        <WhyItotComponet />
+        {/* <WhyItotComponet />
+        <Comprative /> */}
 
-        {/* <CarosalSlider />
-        <Dashboard /> */}
+        <CarosalSlider />
+        <Dashboard />
         {/* <Routes/> */}
         <Footer />
       </BrowserRouter>

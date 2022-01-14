@@ -14,7 +14,6 @@ function CarosalSlider() {
     arrowLeft: false,
     arrowRight: false,
     dots: true,
-    // slidesToShow: 3,
     arrows: false,
     autoplay: true,
     focusOnSelect: true,
@@ -23,20 +22,6 @@ function CarosalSlider() {
     <div className="container-fluid mb-5">
       <div className="mx-3">
         <Slider {...settings}>
-          <div>
-            <img
-              src="Page-01-Sec-03/002-b.jpg"
-              alt="link not found"
-              style={{ width: "100%", height: "70vh", margin: "auto" }}
-            />
-          </div>
-          <div>
-            <img
-              src="Page-01-Sec-03/002-b.jpg"
-              alt="link not found"
-              style={{ width: "100%", height: "70vh", margin: "auto" }}
-            />
-          </div>
           <div>
             <img
               src="Page-01-Sec-03/003-b.jpg"
@@ -48,6 +33,20 @@ function CarosalSlider() {
           <div>
             <img
               src="Page-01-Sec-03/004-b.jpg"
+              alt="link not found"
+              style={{ width: "100%", height: "70vh", margin: "auto" }}
+            />
+          </div>
+          <div>
+            <img
+              src="Page01Sec01/002Slide-Pictures5.jpg"
+              alt="link not found"
+              style={{ width: "100%", height: "70vh", margin: "auto" }}
+            />
+          </div>
+          <div>
+            <img
+              src="Page01Sec01/002Slide-Pictures3.jpg"
               alt="link not found"
               style={{ width: "100%", height: "70vh", margin: "auto" }}
             />

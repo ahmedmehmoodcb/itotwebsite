@@ -131,7 +131,7 @@ function NaveBar() {
                       <p className="m-0">INNOVATIVE TECHNOLOGY OF TEACHING</p>
                     </div>
                     <div className="w-100 py-2">
-                      <p className="text-end m-0">
+                      <p className="text-end m-0 text-primary">
                         21 century&#39; s style of education that transform
                         lives
                       </p>
@@ -147,7 +147,7 @@ function NaveBar() {
                         {" "}
                         create Account
                       </a>
-                      <span className="px-2">-</span>
+                      <span className="px-2 text-primary ">-</span>
                       <a href="/">
                         Login &nbsp;
                         <span className="pl-2">
@@ -174,57 +174,51 @@ function NaveBar() {
                         <li className="nav-item">
                           <Link
                             to="/"
-                            className="nav-link active"
+                            className="nav-link active text-dark"
                             aria-current="page"
                           >
                             Home
                           </Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item ">
                           <a
-                            className="nav-link active"
+                            className="nav-link active text-dark"
                             aria-current="page"
                             href="/"
                           >
                             About
                           </a>
                         </li>
-                        <li className="nav-item">
-                          {/* <a
-                            className="nav-link active"
-                            aria-current="page"
-                            href="/"
-                          > */}
+                        <li className="nav-item ">
                           <Link
                             to="/whyitot"
-                            className="nav-link active"
+                            className="nav-link active text-dark"
                             aria-current="page"
                           >
                             Why itot
                           </Link>
-                          {/* </a> */}
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item ">
                           <a
-                            className="nav-link active"
+                            className="nav-link active text-dark"
                             aria-current="page"
                             href="/"
                           >
                             Market Place
                           </a>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item ">
                           <a
-                            className="nav-link active"
+                            className="nav-link active text-dark"
                             aria-current="page"
                             href="/"
                           >
                             Web Portal
                           </a>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item ">
                           <a
-                            className="nav-link active"
+                            className="nav-link active text-dark"
                             aria-current="page"
                             href="/"
                           >
@@ -245,25 +239,3 @@ function NaveBar() {
 }
 
 export default NaveBar;
-{
-  /* <div className="collapse navbar-collapse" id="navbarText">
-  <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-    <li className="nav-item">
-      <a className="nav-link active" aria-current="page" href="/">
-        Home
-      </a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href="/">
-        Features
-      </a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href="/">
-        Pricing
-      </a>
-    </li>
-  </ul>
-</div>;
-          */
-}
