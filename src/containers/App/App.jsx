@@ -1,29 +1,49 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "../../App.css";
+import React, { Component } from "react";
+import { hot } from "react-hot-loader";
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
+import "../../scss/app.scss";
+import Router from "./Router";
+import store from "./store";
+import ScrollToTop from "./ScrollToTop";
+import Loader from "../Common/Loader";
+import Layout from "../Layout";
 
-import NaveBar from "../component/NaveBar";
-import CarosalSlider from "../component/dashboard/Slider";
-import Dashboard from "../Layout/Dashboard";
-import WhyItotComponet from "../component/whyItot/whyItotComponet";
-import Footer from "../component/Footer";
-import Comprative from "../component/Page-02/comprative";
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      loading: true,
+    };
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <NaveBar />
-        {/* <Routes> */}
-        {/* <WhyItotComponet />
-        <Comprative /> */}
+  componentDidMount() {
+    window.addEventListener("load", () => {
+      setTimeout(() => this.setState({ loading: false }), 500);
+    });
+  }
 
-        <CarosalSlider />
-        <Dashboard />
-        {/* <Routes/> */}
-        <Footer />
-      </BrowserRouter>
-    </div>
-  );
+  render() {
+    const { loading } = this.state;
+    return (
+      <Provider store={store}>
+        <BrowserRouter>
+          <ScrollToTop>
+            <>
+              {loading ? (
+                <Loader />
+              ) : (
+                <Layout>
+                  <Router />
+                </Layout>
+              )}
+            </>
+          </ScrollToTop>
+        </BrowserRouter>
+      </Provider>
+    );
+  }
 }
 
-export default App;
+export default hot(module)(App);
