@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
-import "../../scss/app.scss";
 import Router from "./Router";
 import store from "./store";
 import ScrollToTop from "./ScrollToTop";
 import Loader from "../Common/Loader";
 import Layout from "../Layout";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../../scss/app.scss";
 
 class App extends Component {
   constructor() {
