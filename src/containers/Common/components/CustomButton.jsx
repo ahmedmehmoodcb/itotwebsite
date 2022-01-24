@@ -11,7 +11,7 @@ function CustomButton({ children, variant, text, to, className, onClick }) {
       type="button"
       className={classNames(
         isContained ? "bg-custom-blue text-white" : "bg-white text-custom-blue",
-        "border-2 border-custom-blue border-opacity-80 px-3 py-2 rounded-md",
+        "border-2 border-custom-blue border-opacity-80 px-3 py-2 rounded-md text-xs md:text-sm",
         className
       )}
       onClick={

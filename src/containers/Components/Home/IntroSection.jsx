@@ -33,7 +33,7 @@ function IntroSection() {
               Aliqua excepteur esse eu ad in sunt excepteur tempor id et.Aliqua
               excepteur esse eu ad in sunt excepteur tempor id et.
             </p>
-            <CustomButton to="/signup" variant="transparent">
+            <CustomButton to="/register" variant="transparent">
               <span className="flex items-center uppercase text-sm">
                 Learn More <FaAngleRight className="ml-3" size={18} />
               </span>

@@ -1,7 +1,12 @@
 import React from "react";
+import BannerSection from "../../Components/WhyITOT/BannerSection";
 
 function WhyITOTPage() {
-  return <div>Why ITOT</div>;
+  return (
+    <div>
+      <BannerSection />
+    </div>
+  );
 }
 
 export default WhyITOTPage;

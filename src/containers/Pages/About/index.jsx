@@ -1,7 +1,12 @@
 import React from "react";
+import Construction from "../../Common/components/Construction";
 
 function AboutPage() {
-  return <div>About Page</div>;
+  return (
+    <div>
+      <Construction />
+    </div>
+  );
 }
 
 export default AboutPage;

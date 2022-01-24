@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   FaWhatsapp,
@@ -9,6 +10,7 @@ import {
   FaTwitter,
   FaYoutube,
   FaViber,
+  FaAngleUp,
 } from "react-icons/fa";
 
 const quickLinks = [
@@ -24,12 +26,25 @@ const importantLinks = [
   { label: "Marketplace", link: "/market-place" },
   { label: "Web Portal", link: "/web-portal" },
   { label: "Courses", link: "/about" },
-  { label: "Register as ITOT team member", link: "/signup" },
-  { label: "Register Your School", link: "/signup" },
+  { label: "Register as ITOT team member", link: "/register" },
+  { label: "Register Your School", link: "/register" },
   { label: "Packages for School", link: "/help" },
 ];
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 function Footer() {
+  const [isPageScrolled, setIsPageScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) setIsPageScrolled(true);
+      else setIsPageScrolled(false);
+    });
+  }, []);
+
   return (
     <footer className="bg-custom-blue">
       <div className="container py-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 text-white text-sm gap-3">
@@ -178,6 +193,15 @@ function Footer() {
           </Link>
         </div>
       </div>
+      {/* Scroll To Top */}
+      {isPageScrolled && (
+        <div
+          className="bg-yellow-500 p-2 cursor-pointer rounded-full fixed right-4 bottom-4"
+          onClick={scrollToTop}
+        >
+          <FaAngleUp size={20} className="text-white" />
+        </div>
+      )}
     </footer>
   );
 }

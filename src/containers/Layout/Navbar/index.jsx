@@ -58,7 +58,7 @@ function Navbar() {
                 <Menu as="div" className="ml-3 relative z-10">
                   <div className="flex flex-row ">
                     <div className="hidden md:flex uppercase font-bold text-sm items-center pr-4 ">
-                      <Link to="/signup">
+                      <Link to="/register">
                         <h4 className="text-custom-blue">Create - Account</h4>
                       </Link>
                       <Link to="/login">
@@ -146,7 +146,7 @@ function Navbar() {
                 Login
               </NavLink>
               <NavLink
-                to="/signup"
+                to="/register"
                 className="block px-3 py-2 rounded-md text-base font-medium hover:text-custom-red"
                 activeClassName="bg-custom-red text-white"
                 exact
