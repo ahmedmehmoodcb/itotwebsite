@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
 import Slider from "react-slick";
+import ImageLoader from "../../Common/components/ImageLoader";
 
 const settings = {
   infinite: true,
@@ -28,7 +29,11 @@ function BannerSlider() {
       <Slider {...settings}>
         {slides.map(item => (
           <div key={item.label}>
-            <img src={item.path} alt={item.label} className="w-screen h-auto" />
+            <ImageLoader
+              src={item.path}
+              alt={item.label}
+              className="w-screen h-auto"
+            />
           </div>
         ))}
       </Slider>

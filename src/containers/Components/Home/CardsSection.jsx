@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SectionWrapper from "../../Common/containers/SectionWrapper";
+import ImageLoader from "../../Common/components/ImageLoader";
 
 const cardsData = [
   {
@@ -56,7 +57,11 @@ const cardsData = [
 const CustomCard = ({ data }) => (
   <div key={data.title} className="h-96 flex flex-col items-center gap-3">
     <div className="w-2/3">
-      <img className="w-full h-auto" src={data.image} alt="Card" />
+      <ImageLoader
+        src={data.image}
+        alt={data.title}
+        className="w-full h-auto"
+      />
     </div>
     <h4 className="font-bold text-center">{data.title}</h4>
     <p className="text-sm text-center">{data.description}</p>
