@@ -9,6 +9,9 @@ const MarketPlacePage = lazy(() => import("../Pages/MarketPlace"));
 const WebPortalPage = lazy(() => import("../Pages/WebPortal"));
 const HelpPage = lazy(() => import("../Pages/Help"));
 const LoginPage = lazy(() => import("../Pages/Login"));
+const RegistrationProcessPage = lazy(() =>
+  import("../Pages/RegistrationProcess")
+);
 const RegisterPage = lazy(() => import("../Pages/Register"));
 const NotFoundPage = lazy(() => import("../ErrorPages/NotFoundPage"));
 
@@ -23,6 +26,10 @@ const Router = () => (
         <Route path="/web-portal" component={WebPortalPage} />
         <Route path="/help" component={HelpPage} />
         <Route path="/login" component={LoginPage} />
+        <Route
+          path="/registration-process"
+          component={RegistrationProcessPage}
+        />
         <Route path="/register" component={RegisterPage} />
         <Route path="/not-found" component={NotFoundPage} />
         <Redirect from="*" to="/not-found" />

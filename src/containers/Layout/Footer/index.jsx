@@ -65,7 +65,7 @@ function Footer() {
         </div>
         {/* Quick Links */}
         <div className="flex flex-col">
-          <h4 className="uppercase font-semibold">Quick Links</h4>
+          <h4 className="uppercase font-semibold text-white">Quick Links</h4>
           <div className="flex flex-col space-y-1 mt-4">
             {quickLinks.map(item => (
               <Link
@@ -80,7 +80,9 @@ function Footer() {
         </div>
         {/* Important Links */}
         <div className="flex flex-col">
-          <h4 className="uppercase font-semibold">Important Links</h4>
+          <h4 className="uppercase font-semibold text-white">
+            Important Links
+          </h4>
           <div className="flex flex-col space-y-1 mt-4">
             {importantLinks.map(item => (
               <Link
@@ -95,7 +97,7 @@ function Footer() {
         </div>
         {/* Stay Connected (Web) */}
         <div className="hidden md:flex flex-col items-center">
-          <h4 className="uppercase font-semibold text-center">
+          <h4 className="uppercase font-semibold text-center text-white">
             Stay Connected with itot
           </h4>
           <div className="flex flex-col space-y-4 mt-4">
@@ -131,7 +133,7 @@ function Footer() {
         </div>
         {/* Affliations and Acknowledgments */}
         <div className="hidden lg:flex flex-col items-center">
-          <h4 className="uppercase font-semibold text-center">
+          <h4 className="uppercase font-semibold text-center text-white">
             Affliations and Acknowledgements
           </h4>
           <div className="md:h-28 lg:h-32 w-auto mt-4">
@@ -145,7 +147,9 @@ function Footer() {
       </div>
       {/* Stay Connected (Mobile) */}
       <div className="md:hidden flex flex-col items-center text-white text-sm">
-        <h4 className="uppercase font-semibold">Stay Connected with itot</h4>
+        <h4 className="uppercase font-semibold text-white">
+          Stay Connected with itot
+        </h4>
         <div className="flex flex-col p-3">
           <div className="flex justify-between space-x-5">
             <Link to="/">

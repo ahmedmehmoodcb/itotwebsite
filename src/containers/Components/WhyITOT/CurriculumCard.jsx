@@ -11,7 +11,7 @@ function CurriculumCard({ data, reverse }) {
       )}
     >
       <h3 className="uppercase text-lg font-bold">{data.heading}</h3>
-      <img src={data.image} alt={data.heading} className="w-full h-auto" />
+      <img src={data.image} alt={data.heading} className="w-2/3 h-auto" />
       <p className="text-sm">{data.description}</p>
     </div>
   );

@@ -71,7 +71,7 @@ function CurriculumSection() {
       title="Curriculum Section 10 Steps (10 Cs)"
       containerId="curriculum"
     >
-      <div className="w-full grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 my-3 px-3">
+      <div className="w-full grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 my-4 lg:pr-10 md:py-3">
         {data.map((item, index) => (
           <CurriculumCard data={item} reverse={index % 2 === 1} />
         ))}

@@ -58,7 +58,7 @@ function Navbar() {
                 <Menu as="div" className="ml-3 relative z-10">
                   <div className="flex flex-row ">
                     <div className="hidden md:flex uppercase font-bold text-sm items-center pr-4 ">
-                      <Link to="/register">
+                      <Link to="/registration-process">
                         <h4 className="text-custom-blue">Create - Account</h4>
                       </Link>
                       <Link to="/login">

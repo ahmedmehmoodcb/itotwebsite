@@ -10,6 +10,7 @@ import Layout from "../Layout";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "antd/dist/antd.css";
 import "../../scss/app.scss";
 
 class App extends Component {

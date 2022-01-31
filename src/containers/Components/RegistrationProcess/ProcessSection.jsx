@@ -42,21 +42,23 @@ const StepSection = ({ data, rtl }) => (
   <div
     key={data.id}
     className={classNames(
-      "flex sm:gap-5 md:gap-7 py-5",
+      "md:w-3/5 flex sm:gap-5 md:gap-7 py-5 step-card",
       rtl ? "flex-row-reverse" : "flex-row"
     )}
   >
     <div
       className={classNames(
-        "hidden md:w-1/4 lg:w-1/3 md:flex",
-        rtl ? "justify-start items-center" : "justify-end mt-2"
+        "hidden md:w-1/4 lg:w-1/6 md:flex items-center",
+        rtl ? "justify-end -mr-5" : "justify-start -ml-5"
       )}
     >
-      <span className="bg-custom-red rounded-full text-white font-bold h-10 w-10 flex justify-center items-center mx-5">
-        {data.id}
+      <span className="h-20 bg-white flex items-center">
+        <span className="bg-custom-red rounded-full text-white font-bold h-10 w-10 flex justify-center items-center">
+          {data.id}
+        </span>
       </span>
     </div>
-    <div className="sm:w-1/2 md:w-1/2 lg:w-1/3 flex flex-col gap-1 text-justify">
+    <div className="sm:w-1/2 md:w-1/2 lg:w-3/6 flex flex-col gap-1 text-justify">
       <h3 className="text-xl uppercase font-bold">{data.stepNo}</h3>
       <h4 className="text-lg uppercase text-justify font-semibold">
         {data.title}
@@ -65,14 +67,14 @@ const StepSection = ({ data, rtl }) => (
     </div>
     <div
       className={classNames(
-        "sm:w-1/2 md:w-1/4 lg:w-1/3 flex items-center",
-        rtl ? "justify-end" : "justify-start"
+        "sm:w-1/2 md:w-1/4 lg:w-2/6 flex items-center",
+        rtl ? "justify-start" : "justify-end"
       )}
     >
       <img
         src={data.image}
         alt={data.stepNo}
-        className="sm:w-full lg:w-1/3 h-auto"
+        className="sm:w-full lg:w-1/2 h-auto"
       />
     </div>
   </div>
@@ -87,7 +89,7 @@ function ProcessSection() {
         </h2>
         <p className="text-center">Just like this, simply done !</p>
       </div>
-      <div className="flex flex-col mt-5">
+      <div className="flex flex-col items-center mt-5">
         {steps.map((item, index) => (
           <StepSection data={item} rtl={index % 2} />
         ))}

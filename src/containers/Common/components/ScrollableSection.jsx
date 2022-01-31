@@ -6,7 +6,7 @@ function ScrollableSection({ title, containerId, children }) {
   return (
     <div className="p-2">
       <Element name={containerId} className="w-full flex flex-col">
-        <h3 className="text-custom-blue font-bold sm:text-xl md:text-2xl lg:text-3xl">
+        <h3 className="text-custom-blue sm:text-center md:text-left font-bold sm:text-xl md:text-2xl lg:text-3xl">
           {title}
         </h3>
         <div>{children}</div>

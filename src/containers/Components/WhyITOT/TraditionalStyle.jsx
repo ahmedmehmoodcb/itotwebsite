@@ -11,8 +11,15 @@ const tradtionalStyle = [
   "Teacher-movated",
   "Teacher sets student's pace",
   "Seek help from teacher",
-  "Teacher center ",
+  "Teacher center",
+  "Teacher guide students",
+  "Emphasize on abstract",
+  "Teacher sets timetable",
+  "Left thinking",
+  "Facts hard to find",
+  "Cramming",
 ];
+
 const itotStyle = [
   "Bag free system",
   "Teachers smulate, provoke and engage",
@@ -23,6 +30,12 @@ const itotStyle = [
   "Student sets own pace",
   "Encourage to help one another",
   "Student centered learning environment",
+  "Students free to discover by his/her own",
+  "Emphasize on concrete",
+  "Student chooses by choice",
+  "Integrated thinking",
+  "Facts at finger tips",
+  "Hands-on",
 ];
 
 function TraditionalStyle() {
@@ -32,12 +45,9 @@ function TraditionalStyle() {
       containerId="traditionalStyle"
     >
       <div className="flex flex-col sm:p-3 md:my-3 md:p-5">
-        <div
-          className="hidden md:flex justify-between items-center text-white"
-          style={{ fontSize: "0.5rem" }}
-        >
+        <div className="hidden md:flex justify-between items-center text-white text-xxs">
           <div
-            className="sm:h-5 md:h-7 lg:h-10 w-1/4 bg-contain flex flex-col items-center justify-center"
+            className="sm:h-5 md:h-7 lg:h-10 w-1/3 bg-contain bg-no-repeat flex flex-col items-center justify-center bg-center"
             style={{
               backgroundImage: 'url("/assets/images/whyITOT/style/left.png")',
             }}
@@ -51,7 +61,7 @@ function TraditionalStyle() {
             alt="Brain"
           />
           <div
-            className="sm:h-5 md:h-7 lg:h-10 w-1/4 bg-contain flex flex-col items-center justify-center"
+            className="sm:h-5 md:h-7 lg:h-10 w-1/3 bg-contain bg-no-repeat flex flex-col items-center justify-center bg-center"
             style={{
               backgroundImage: 'url("/assets/images/whyITOT/style/right.png")',
             }}
@@ -60,8 +70,8 @@ function TraditionalStyle() {
             <p className="">(21st Century Syllabus)</p>
           </div>
         </div>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 sm:gap-2 md:gap-5">
-          <div className="flex flex-col my-5">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 sm:gap-2 md:gap-5 pt-5">
+          <div className="flex flex-col">
             {tradtionalStyle.map((item, index) => (
               <div
                 key={item}
@@ -74,7 +84,7 @@ function TraditionalStyle() {
               </div>
             ))}
           </div>
-          <div className="flex flex-col my-5">
+          <div className="flex flex-col">
             {itotStyle.map((item, index) => (
               <div
                 key={item}
