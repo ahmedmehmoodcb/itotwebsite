@@ -1,98 +1,57 @@
 /* eslint-disable jsx-a11y/label-has-for */
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import FileIcon from 'mdi-react/FileIcon';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import { Upload, Button } from "antd";
+import { AiOutlineUpload } from "react-icons/ai";
 
 class FileInputField extends PureComponent {
-  static propTypes = {
-    onChange: PropTypes.func.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.oneOfType([
-      PropTypes.shape({
-        name: PropTypes.string,
-      }),
-      PropTypes.string,
-    ]),
-  };
-
-  static defaultProps = {
-    value: null,
+  handleChange = item => {
+    // this is going to call setFieldValue and manually update values.topics
+    const { onChange, name } = this.props;
+    // item.file will select single file where item.files consist of multiple files selected
+    onChange(name, item.file);
   };
 
   render() {
-    const { onChange, name, value } = this.props;
+    const { name, placeholder, className, error, touched, value } = this.props;
 
     return (
-      <div style={{ textAlign: 'center' }} className="box">
-        <input
-          type="file"
+      <div className={className}>
+        <Upload
           name={name}
-          id={name}
-          className="inputfile inputfile-4"
-          data-multiple-caption="{count} files selected"
-          multiple
-          onChange={e => {
-            e.preventDefault();
-            // convert files to an array
-            const files = [...e.target.files];
-            onChange({ file: files[0], name: files[0].name });
-          }}
-        />
-        <label htmlFor={name}>
-          <figure>
-            <FileIcon size={100} />
-          </figure>
-          <span>{value.name || 'Choose a file'}</span>
-        </label>
+          listType="picture"
+          onChange={this.handleChange}
+          defaultFileList={value ? [value] : []}
+        >
+          <Button
+            className="w-full flex gap-2"
+            icon={<AiOutlineUpload size={16} />}
+          >
+            {placeholder}
+          </Button>
+        </Upload>
+        {touched && error && <span className="form-field-error">{error}</span>}
       </div>
-
-      // </div>
-      // <div className="form__form-group-file">
-      //   <label htmlFor={name}>
-      //     Choose the file
-      //     <input
-      //       type="file"
-      //       name={name}
-      //       id={name}
-      //       onChange={e => {
-      //         e.preventDefault();
-      //         // convert files to an array
-      //         const files = [...e.target.files];
-      //         onChange({ file: files[0], name: files[0].name });
-      //       }}
-      //     />
-      //   </label>
-      //   <span>{value.name}</span>
-      // </div>
     );
   }
 }
 
-const renderFileInputField = props => {
-  const { input, meta } = props;
-  return (
-    <div className="form__form-group-input-wrap">
-      <FileInputField {...input} />
-      {meta.touched && meta.error && (
-        <span className="form__form-group-error">{meta.error}</span>
-      )}
-    </div>
-  );
+FileInputField.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  className: PropTypes.string,
+  touched: PropTypes.bool,
+  error: PropTypes.string,
+  value: PropTypes.object,
 };
 
-renderFileInputField.propTypes = {
-  input: PropTypes.shape({
-    onChange: PropTypes.func,
-    name: PropTypes.string,
-  }).isRequired,
-  meta: PropTypes.shape({
-    touched: PropTypes.bool,
-    error: PropTypes.string,
-  }),
+FileInputField.defaultProps = {
+  placeholder: "Click to Upload",
+  touched: false,
+  className: "",
+  error: "",
+  value: null,
 };
 
-renderFileInputField.defaultProps = {
-  meta: null,
-};
-
-export default renderFileInputField;
+export default FileInputField;

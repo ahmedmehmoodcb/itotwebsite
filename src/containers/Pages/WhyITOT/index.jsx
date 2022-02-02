@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../../Components/WhyITOT/Sidebar";
-import BannerSection from "../../Components/WhyITOT/BannerSection";
+import BannerSection from "../../Common/containers/BannerSection";
 import CurriculumSection from "../../Components/WhyITOT/CurriculumSection";
 import TraditionalStyle from "../../Components/WhyITOT/TraditionalStyle";
 import EffectOnChildren from "../../Components/WhyITOT/EffectOnChildren";
@@ -11,7 +11,7 @@ import EffectOnSchools from "../../Components/WhyITOT/EffectOnSchools";
 function WhyITOTPage() {
   return (
     <>
-      <BannerSection />
+      <BannerSection title="Why ITOT" />
       <div className="flex">
         <Sidebar className="w-1/5" />
         <div className="w-full md:w-4/5">

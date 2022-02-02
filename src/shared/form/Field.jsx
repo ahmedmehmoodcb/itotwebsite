@@ -38,7 +38,13 @@ const FormikField = ({
   return (
     <div className={`sm:w-full md:w-2/3 ${className}`}>
       {textArea && (
-        <textarea {...field} disabled={disabled} placeholder={placeholder} />
+        <Input.TextArea
+          {...field}
+          {...props}
+          maxLength={120}
+          disabled={disabled}
+          placeholder={placeholder}
+        />
       )}
       {!textArea && (
         <Input

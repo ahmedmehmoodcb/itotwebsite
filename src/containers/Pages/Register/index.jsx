@@ -26,11 +26,9 @@ const initialStepsData = [
 ];
 
 function Register() {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(2);
   const [steps, setSteps] = useState(initialStepsData);
   const [form, setForm] = useState(null);
-
-  console.log(form);
 
   const changeStep = step => {
     const newSteps = steps.map(item => {
@@ -68,13 +66,25 @@ function Register() {
         ))}
       </Steps>
       {currentStep === 0 && (
-        <PersonalDetailsForm setForm={setForm} changeStep={changeStep} />
+        <PersonalDetailsForm
+          form={form}
+          setForm={setForm}
+          changeStep={changeStep}
+        />
       )}
       {currentStep === 1 && (
-        <SchoolDetailsForm setForm={setForm} changeStep={changeStep} />
+        <SchoolDetailsForm
+          form={form}
+          setForm={setForm}
+          changeStep={changeStep}
+        />
       )}
       {currentStep === 2 && (
-        <ClassRecordForm setForm={setForm} changeStep={changeStep} />
+        <ClassRecordForm
+          form={form}
+          setForm={setForm}
+          changeStep={changeStep}
+        />
       )}
     </SectionWrapper>
   );
